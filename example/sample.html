@@ -1,0 +1,122 @@
+<html>
+	<head>
+	<script src="https://developer.payeezy.com/v1/payeezy.js" type="text/javascript">
+		Payeezy.setApiKey('y6pWAJNyJyjGv66IsVuWnklkKUPFbb0a');
+		Payeezy.setMerchantIdentifier('3176752955');
+		var ApiSecret = "86fbae7030253af3cd15faef2a1f4b67353e41fb6799f576b5093ae52901e6f786fbae7030253af3cd15faef2a1f4b67353e41fb6799f576b5093ae52901e6f7";
+	function submitthis(theForm)
+	{
+		
+			return false;
+	}
+	function submitthis(theForm)
+	{
+		
+			return false;
+	}
+	function validateFormOnSubmit(theForm) {
+	
+		return false;
+	}
+		
+		
+			
+			var responseHandler = function(status, response) {
+				var $form = $('#payment-info-form');
+				if (status != 201) {
+				if (response.error) {
+				var errorMessages = response.error.messages;
+				var allErrors = '';
+				for (i=0; i<errorMessages.length;i++) 
+				{
+					allErrors = allErrors + errorMessages[i].description;
+				}
+					$form.find('.payment-errors').text(allErrors);
+				}
+					$form.find('button').prop('disabled', false);
+				} else {
+					var token = response.token.value;
+					$form.append($('<input type="hidden" name="payeezyToken"/>').val(token));
+					$form.get(0).submit();
+				}
+			};
+
+	</script>
+	</head>
+	<body onsubmit="
+					var $form = $(this);
+					$form.find('button').prop('disabled', true);
+					Payeezy.createToken(responseHandler);
+					return true;
+			">
+		<!--<form action="{call to merchant server}" method="post" id="payment-info-form" >-->
+		<form action="#" onsubmit="return validateFormOnSubmit(form);" method="post" id="payment-info-form" >
+			<span class="payment-errors"></span>
+			<div class="row">
+			<label>Card Type : </label>
+			<select payeezy-data="card_type">
+			<option value="visa">Visa</option>
+			<option value="mastercard">Master Card</option>
+			<option value="American Express" >American Express</option>
+			<option value="discover" >Discover</option>
+			</select>
+			</div>
+			<div class="row">
+			<label>Cardholder Name : </label>
+			<input type="text" payeezy-data="cardholder_name"value="Tom Eck"/>
+			</div>
+			<div class="row">
+			<label>Card Number : </label>
+			<input type="text" payeezy-data="cc_number"value="4788250000028291"/>
+			<div>
+			<div class="row">
+			<label>CVV Code : </label>
+			<input type="text" payeezy-data="cvv_code"value="123"/>
+			</div>
+			<div class="row">
+			<label>Expiry Date : </label>
+			<select payeezy-data="exp_month">
+			<option value="01">01</option>
+			<option value="02">02</option>
+			<option value="03">03</option>
+			<option value="04">04</option>
+			<option value="05">05</option>
+			<option value="06">06</option>
+			<option value="07">07</option>
+			<option value="08">08</option>
+			<option value="09">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12" selected>12</option>
+			</select>
+			<select payeezy-data="exp_year">
+			<option value="14" selected>2014</option>
+			<option value="15">2015</option>
+			<option value="16">2016</option>
+			<option value="17">2017</option>
+			<option value="18">2018</option>
+			</select>
+			<br/>
+			New Section 7 Page 2
+			</select>
+			</div>
+			<div class="row">
+			<label>Merchant Ref : </label>
+			<input type="text" name="merchant_ref" id="merchant_ref" value="Token Testing"/>
+			</div>
+			<div class="row">
+			<label>Transaction Type : </label>
+			<select id="transaction_type" name="transaction_type" >
+			<option value="purchase" >Purchase</option>
+			<option value="authorize" selected="selected" >Authorize</option>
+			</select>
+			</div>
+			<div class="row">
+			<label>Amount : </label>
+			<input type="text" name="amount" id="amount" value="101"/>
+			</div>
+			<button type="submit" onsubmit="submitthis();">Make Payment</button>
+			
+		</form>
+	</body
+</html>
