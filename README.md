@@ -38,7 +38,7 @@ For more information on getting started, visit  [get_start_with_payeezy guide] (
 For test credit card,eCheck,GiftCard please refer to [test data ](https://github.com/payeezy/testing_payeezy/blob/master/payeezy_testdata042015.pdf) or [download] (https://github.com/payeezy/testing_payeezy/raw/master/payeezy_testdata042015.pdf)
 
 # Error code/response - Payeezy {SANDBOX/PROD region}
-For HTTP status code, API Error codes and error description please refer to [API error code ](https://github.com/payeezy/payeezy_js/raw/master/payeezy_js_guide/payeezy_js042015.pdf)
+For HTTP status code, API Error codes and error description please refer to [API error code ](https://developer.payeezy.com/payeezy_new_docs/apis) and select your API
 
 #Questions?
 We're always happy to help with code or other questions you might have! Check out [FAQ page](https://developer.payeezy.com/faq-page) or call us. 
