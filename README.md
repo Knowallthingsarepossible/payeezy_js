@@ -32,7 +32,7 @@ Using below listed steps, you can easily integrate your mobile/web payment appli
 
 ![alt tag](https://github.com/nohup-atulparmar/payeezy_js/raw/master/example/get_start_with_payeezy.png)
 
-For more information on getting started, visit  [get_start_with_payeezy guide] (https://github.com/payeezy/get_started_with_payeezy/raw/master/get_started_with_payeezy042015.pdf)
+For more information on getting started, visit  [get_start_with_payeezy guide] (https://github.com/payeezy/get_started_with_payeezy/blob/master/get_started_with_payeezy042015.pdf) or [download](https://github.com/payeezy/get_started_with_payeezy/raw/master/get_started_with_payeezy042015.pdf)
 
 # Testing - Payeezy {SANDBOX region}
 For test credit card,eCheck,GiftCard please refer to [test data](https://github.com/payeezy/testing_payeezy/raw/master/payeezy_testdata042015.pdf)
