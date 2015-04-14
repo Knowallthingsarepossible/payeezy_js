@@ -2,7 +2,7 @@
 
 Sample code provide Payeezy Javascript Integration
 
-![alt tag](https://raw.githubusercontent.com/nohup-atulparmar/payeezy_js/master/example/payeezyjs.png?token=AJRnv7i1EkmqQ5Y2fcD6Bd8Ic7gp0njYks5VK-xRwA%3D%3D)
+![alt tag](https://github.com/payeezy/payeezy_js/raw/master/example/payeezyjs.png)
 
 1. Payeezy.js (which is included on the page using a &lt; script> tag) intercepts the form submit, and then
 asynchronously posts the credit card details to Payeezy. This call uses JSONP over https, passing in API key and an
